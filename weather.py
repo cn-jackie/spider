@@ -97,8 +97,8 @@ if __name__ == '__main__':
                 # print(nightListDF[i])
                 dayFileName = nameList[urlList.index(url)] + '地区' + str(i) + '日后白天天气情况.csv'
                 nightFileName = nameList[urlList.index(url)] + '地区' + str(i) + '日后夜间天气情况.csv'
-                dayListDF[i].to_csv(dayFileName)
-                nightListDF[i].to_csv(nightFileName)
+                dayListDF[i].to_csv(dayFileName, encoding="utf_8_sig")
+                nightListDF[i].to_csv(nightFileName, encoding="utf_8_sig")
 
     print()
     print('一共包含数据' + str(rowCounter) + '条')
